@@ -25,15 +25,13 @@ function generateGrid (where, howMany){
             cellElement.className = 'cell';
             cellElement.innerText = i+1;
             where.append(cellElement);
-            if (howMany === 100){
-                  cellElement.style.width = 'calc(100% / 10';
-                  console.log('hai selezionato 100');
-            } else if (howMany === 81){
-                  cellElement.style.width = 'calc(100% / 9';
-                  console.log('hai selezionato 81');
-            } else (howMany === 49)
-                  cellElement.style.width = 'calc(100% / 7';
-                  console.log('hai selezionato 49');
+            if (howMany === '100'){
+                  cellElement.style.width = 'calc(100% / 10)';
+            } else if (howMany === '81'){
+                  cellElement.style.width = 'calc(100% / 9)';
+            } else {
+                  cellElement.style.width = 'calc(100% / 7)';
+            }
       }
 
       
