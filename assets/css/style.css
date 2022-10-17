@@ -3,30 +3,22 @@
       padding: 0;
       box-sizing: border-box;
 }
-section {
-      display: none;
-}
-.container_cell {
+
+.container_cells {
       max-width: 1200px;
       margin: auto;
-      display: flex;
-      flex-wrap: wrap;
 }
 
+
+.grid {
+      display: flex;
+}
 .cell {
-      width: calc(100% / 10);
+      width: 100px;
       aspect-ratio: 1 / 1;
       border: 1px solid;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-}
-
-.active {
-      display: block;
-}
-
-.color_click {
-      background-color: blue;
 }

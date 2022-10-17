@@ -10,9 +10,7 @@ const sectionGame = document.querySelector('section');
 playButton.addEventListener('click', function () {
       sectionGame.classList.add('active');
 })
-resetButton.addEventListener('click', function () {
-      sectionGame.classList.remove('active');
-})
+
 
 // seleziono il container dove metto le cell
 const gridContainer = document.querySelector('.container_cell');
