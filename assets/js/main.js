@@ -3,11 +3,15 @@
 // L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 // Ogni cella ha un numero progressivo, da 1 a 100.
 
-const playButton = document.querySelector('.btn');
+const playButton = document.querySelector('.btn-primary');
+const resetButton = document.querySelector('.btn-secondary');
 const sectionGame = document.querySelector('section');
 
 playButton.addEventListener('click', function () {
-      sectionGame.className = 'active';
+      sectionGame.classList.add('active');
+})
+resetButton.addEventListener('click', function () {
+      sectionGame.classList.remove('active');
 })
 
 // seleziono il container dove metto le cell
