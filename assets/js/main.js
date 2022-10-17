@@ -11,13 +11,13 @@ const playButton = document.querySelector('.btn');
 // let howMany = 100; //nella funzione questo valore voglio che sia dinamico
 
 //creo una funzione per poterla evocare quando premo il bottone quindi GENERARE la griglia e non nasconderla e farla apparire
- 
+
 playButton.addEventListener('click', function(){
       gridContainer.innerHTML= '';
       const cellNumber = document.querySelector('.form-select').value; // il valore del select lo uso per indicare quante celle voglio nella funzione
       generateGrid(gridContainer, cellNumber);  
-  });
-      
+});
+
 
 function generateGrid (where, howMany){
       for (let i = 0; i < howMany; i++) {
@@ -25,5 +25,16 @@ function generateGrid (where, howMany){
             cellElement.className = 'cell';
             cellElement.innerText = i+1;
             where.append(cellElement);
-}
+      }
+
+      if (howMany === 100){
+            cellElement.style.width = 'calc(100% / 10';
+            console.log('hai selezionato 100');
+      } else if (howMany === 81){
+            cellElement.style.width = 'calc(100% / 9';
+            console.log('hai selezionato 81');
+      } else (howMany === 49)
+            cellElement.style.width = 'calc(100% / 7';
+            console.log('hai selezionato 49');
+      
 }
