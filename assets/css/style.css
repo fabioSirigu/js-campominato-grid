@@ -9,9 +9,18 @@
       margin: auto;
 }
 
+.button_section {
+      display: flex;
+      justify-content: center;
+}
 
+.btn,
+.select_level {
+      margin: 1rem;
+}
 .grid {
       display: flex;
+      flex-wrap: wrap;
 }
 .cell {
       width: 100px;
