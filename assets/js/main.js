@@ -5,6 +5,7 @@
 
 const playButton = document.querySelector('.btn');
 const sectionGame = document.querySelector('section');
+
 playButton.addEventListener('click', function () {
       sectionGame.className = 'active';
 })
@@ -15,15 +16,22 @@ const gridContainer = document.querySelector('.container_cell');
 let cellNumber = 100;
 
 
-for (let i = 1; i <= cellNumber; i++) {
-      const numberInsideCell = i;
-      //creo l'elemento e gli assegno la classe
-      const cellElement = document.createElement('div');
-      cellElement.className = 'cell';
-      // inserisco gli elementi creati dentro al container e dentro gli alementi i numeri
-      gridContainer.append(cellElement);
-      cellElement.append(numberInsideCell);
-}
+    
+      for (let i = 1; i <= cellNumber; i++) {
+            const numberInsideCell = i;
+            //creo l'elemento e gli assegno la classe
+            const cellElement = document.createElement('div');
+            cellElement.className = 'cell';
+            // inserisco gli elementi creati dentro al container e dentro gli alementi i numeri
+            gridContainer.append(cellElement);
+            cellElement.append(numberInsideCell);
+            cellElement.addEventListener('click', function(){
+                  console.log('hai cliccato qui', numberInsideCell);
+                  cellElement.classList.toggle('color_click')
+            })
+      }
+
 
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+
