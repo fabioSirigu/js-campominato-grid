@@ -37,7 +37,8 @@ function generateGrid (where, howMany){
       for (let i = 0; i < cell.length; i++){
             const singleCell = cell[i]
             singleCell.addEventListener('click', function () {
-                  singleCell.classList.add('background')   
+                  singleCell.classList.toggle('background'); //uso toggle per mettere e rimuovere la classe al click
+                  console.log(`la cella è la numero ${singleCell.innerHTML}`); //.innerHTML mi stampa il contenuto della singleCell
             })
       }
       
