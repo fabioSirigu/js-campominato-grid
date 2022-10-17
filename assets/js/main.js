@@ -29,6 +29,7 @@ let cellNumber = 100;
             // inserisco gli elementi creati dentro al container e dentro gli alementi i numeri
             gridContainer.append(cellElement);
             cellElement.append(numberInsideCell);
+            //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
             cellElement.addEventListener('click', function(){
                   console.log('hai cliccato qui', numberInsideCell);
                   cellElement.classList.toggle('color_click')
@@ -37,5 +38,4 @@ let cellNumber = 100;
 
 
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
