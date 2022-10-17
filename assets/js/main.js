@@ -1,16 +1,12 @@
 /* campominato */
 
-// L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-// Ogni cella ha un numero progressivo, da 1 a 100.
-//Ci saranno quindi 10 caselle per ognuna delle 10 righe.
+/* L'utente clicca su un bottone che genererà una griglia di gioco quadrata. Ogni cella ha un numero progressivo, da 1 a 100.
+Ci saranno quindi 10 caselle per ognuna delle 10 righe.
+Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+ */
 
 const gridContainer = document.querySelector('.grid');
 const playButton = document.querySelector('.btn');
-/* const level = document.querySelector('.select_level'); */
-
-// let howMany = 100; //nella funzione questo valore voglio che sia dinamico
-
-//creo una funzione per poterla evocare quando premo il bottone quindi GENERARE la griglia e non nasconderla e farla apparire
 
 playButton.addEventListener('click', function(){
       gridContainer.innerHTML= '';
@@ -34,5 +30,12 @@ function generateGrid (where, howMany){
             }
       }
 
-      
+      // quando clicco su ogni casella (quindi dentro un ciclo), la cella cliccata si colora ed emette un messaggio in console col numero della cella cliccata
+      // mi faccio una variabile per selezionare la casella
+      // quando clicco la casella, aggiungo una classe per il colore (o cambio il colore dirett da JS)
+      const cell = document.querySelector('.cell');
+      cell.addEventListener('click', function () {
+            cell.style.background = 'red'
+            
+      })
 }
