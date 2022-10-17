@@ -30,12 +30,15 @@ function generateGrid (where, howMany){
             }
       }
 
-      // quando clicco su ogni casella (quindi dentro un ciclo), la cella cliccata si colora ed emette un messaggio in console col numero della cella cliccata
+      // quando clicco su ogni casella (quindi dentro un ciclo for con la lenght), la cella cliccata si colora ed emette un messaggio in console col numero della cella cliccata
       // mi faccio una variabile per selezionare la casella
       // quando clicco la casella, aggiungo una classe per il colore (o cambio il colore dirett da JS)
-      const cell = document.querySelector('.cell');
-      cell.addEventListener('click', function () {
-            cell.style.background = 'red'
-            
-      })
+      const cell = document.querySelectorAll('.cell');
+      for (let i = 0; i < cell.length; i++){
+            const singleCell = cell[i]
+            singleCell.addEventListener('click', function () {
+                  singleCell.classList.add('background')   
+            })
+      }
+      
 }

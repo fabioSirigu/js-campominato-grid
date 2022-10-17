@@ -31,3 +31,7 @@
       align-items: center;
       font-size: 2rem;
 }
+
+.background {
+      background-color: aqua;
+}
